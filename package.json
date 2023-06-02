@@ -7,6 +7,8 @@
   "scripts": {
     "build": "tsup",
     "start": "yarn build && node .",
+    "image": "docker build -t quay.io/tasato/${npm_package_name}:${npm_package_version} .",
+    "run-image": "docker run -d --rm -p 3000:3000 --name ${npm_package_name} quay.io/tasato/${npm_package_name}:${npm_package_version}",
     "format": "yarn prettier --write ."
   },
   "dependencies": {

@@ -11,3 +11,7 @@
 .pnp.*
 
 node_modules
+dist
+
+# misc
+.vscode

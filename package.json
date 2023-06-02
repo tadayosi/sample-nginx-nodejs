@@ -1,0 +1,7 @@
+{
+  "name": "sample-nginx-nodejs",
+  "version": "1.0.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "packageManager": "yarn@3.6.0"
+}

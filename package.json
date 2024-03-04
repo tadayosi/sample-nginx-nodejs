@@ -6,7 +6,10 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsup",
-    "start": "yarn build && node .",
+    "start": "yarn build && docker compose up --build --force-recreate",
+    "start:app": "yarn build && node .",
+    "start:image": "docker run -it --init --rm -p 3000:3000 --name ${npm_package_name} quay.io/tasato/${npm_package_name}",
+    "image": "yarn build && docker build -t quay.io/tasato/${npm_package_name} .",
     "format": "yarn prettier --write ."
   },
   "dependencies": {

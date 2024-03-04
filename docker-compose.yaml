@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - '8080:80'
+  app:
+    image: quay.io/tasato/sample-nginx-nodejs
+    init: true
+    ports:
+      - '3000:3000'
